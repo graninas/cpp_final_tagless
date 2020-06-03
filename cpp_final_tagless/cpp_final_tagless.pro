@@ -4,16 +4,16 @@ TARGET = cpp_final_tagless
 TEMPLATE = lib
 CONFIG += staticlib
 
-#CONFIG += c++2a
 
-# QMAKE_CXXFLAGS += -std=c++2a
- QMAKE_CXXFLAGS += -fconcepts
-
-# SOURCES += \
+QMAKE_CXXFLAGS += -fconcepts
 
 HEADERS += \
-    ft/types.h \
-    ft/ft.h
+    ft/ft.h \
+    ft/feature_test.h \
+    labyrinth/labyrinth.h \
+    labyrinth/player.h \
+    labyrinth/logger.h \
+    labyrinth/prelude.h
 
 unix {
     target.path = /usr/lib
@@ -21,3 +21,5 @@ unix {
 }
 
 DISTFILES +=
+
+SOURCES +=
