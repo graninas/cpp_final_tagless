@@ -15,9 +15,8 @@
 namespace lab {
 
 template<typename M>
-concept bool Logger = requires(M a) {
-    // logMessage(const std::string&) -> void;
-    { a.logMessage() } -> bool;
+concept bool Logger = requires(M a, void(M::*pp)(std::string)) {
+    { pp = &M::logMessage } -> void;
 };
 
 

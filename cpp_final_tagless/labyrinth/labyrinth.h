@@ -10,20 +10,20 @@ namespace lab {
 class Game {
 
 public:
-//    void logMessage(const std::string& msg)
-    bool logMessage() const
+    void logMessage(const std::string& msg) const
     {
-        std::cout << "abc";
-        return true;
+        std::cout << msg;
     }
 };
+
+static_assert (Logger<Game>);
 
 
 
 template <Logger M>
 void movePlayer(const M& a)
 {
-    a.logMessage();
+    a.logMessage("abc");
 }
 
 

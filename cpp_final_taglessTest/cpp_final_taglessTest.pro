@@ -8,6 +8,7 @@ CONFIG -= app_bundle
 # CONFIG += c++2a
 # QMAKE_CXXFLAGS += -std=c++2a
 QMAKE_CXXFLAGS += -fconcepts
+# QMAKE_CXXFLAGS += -fconcepts-ts
 
 TEMPLATE = app
 

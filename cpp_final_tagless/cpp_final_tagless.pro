@@ -4,8 +4,8 @@ TARGET = cpp_final_tagless
 TEMPLATE = lib
 CONFIG += staticlib
 
-
 QMAKE_CXXFLAGS += -fconcepts
+# QMAKE_CXXFLAGS += -fconcepts-ts
 
 HEADERS += \
     ft/ft.h \
