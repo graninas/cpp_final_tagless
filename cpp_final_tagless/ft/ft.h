@@ -89,7 +89,43 @@ namespace ft {
         { pp = &M::logMessage } -> void;
         };
 
-9.
+9. 2 варианта eDSL: object-based & function-based
+
+    - Object-based:
+        template<typename M>
+        concept Logger = requires(M a, std::string msg) {
+            a.logMessage(msg);
+        };
+        class Game {
+
+        public:
+            void logMessage(const std::string& msg) const {
+                std::cout << msg;
+            }
+        };
+
+    - Function-based:
+        * tempalte function-based:
+
+            template<typename M>
+            concept Logger = requires(M m, std::string msg) {
+                logMessage2(m, msg);
+            };
+
+            template<typename M>
+            void logMessage2(M m, const std::string& msg) {
+                m.logMessage(msg);
+            }
+        * specific function-based (more or like an instance of a type class):
+            template<typename M>
+            concept Logger = requires(M m, std::string msg) {
+                logMessage2(m, msg);
+            };
+
+            void logMessage3(Game g, const std::string& msg) {
+                g.logMessage(msg);
+            }
+
 
   Доклады по теме
 1. Ivan Čukić — Move only C++ design
