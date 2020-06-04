@@ -51,6 +51,8 @@ int testF() {
   f2("abc"s, "cde"s);
 
 //  f(std::use_facet<std::ctype<char>>(std::locale{})); // Error: not EqualityComparable
+
+  return 0;
 }
 
 } // namespace ft
