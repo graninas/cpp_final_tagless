@@ -1,11 +1,10 @@
 #ifndef FT_H
 #define FT_H
 
-
-namespace ft {
-
-
-} // namespace ft
+#include "prelude.h"
+#include "io.h"
+#include "kv_db.h"
+#include "logger.h"
 
 #endif // FT_H
 

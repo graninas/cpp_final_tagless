@@ -6,10 +6,13 @@
 #include <list>
 #include <string>
 #include <tuple>
+#include <variant>
+#include <any>
 
 #include <functional>
 #include <algorithm>
 
 #include <iostream>
+#include <locale>
 
 #endif // PRELUDE_H

@@ -1,30 +1,48 @@
 #ifndef LABYRINTH_H
 #define LABYRINTH_H
 
-#include "prelude.h"
-#include "labyrinth/logger.h"
+#include "../ft/ft.h"
 
 namespace lab {
 
+struct GameInfo {
+
+};
 
 class Game {
 
 public:
-    void logMessage(const std::string& msg) const
-    {
+    void logMessage(const std::string& msg) const {
         std::cout << msg;
+    }
+
+    std::string readFile(const std::string& msg) const {
+        return "some content";
+    }
+
+    void put(int k, const GameInfo& v) {
+
+    }
+
+    void put2(const std::string& k, const std::string& v) {
+
     }
 };
 
-static_assert (Logger<Game>);
+static_assert (ft::Logger<Game>);
 
 
-
-template <Logger M>
-void movePlayer(const M& a)
+template <typename M>
+void movePlayer(M& m)
+    requires ft::IO<M> && ft::Logger<M>
+        && ft::KV_Write<M, int, GameInfo>
+        && ft::KV_Write2<M>
 {
-    a.logMessage("abc");
+    m.logMessage("abc");
+    auto res = m.readFile("file.txt");
+    m.put(1, GameInfo {});
 }
+
 
 
 

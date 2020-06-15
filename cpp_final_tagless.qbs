@@ -3,13 +3,12 @@ import qbs
 CppApplication {
     consoleApplication: true
     files: [
-        "ft/context.h",
-        "ft/feature_test.h",
         "ft/ft.h",
+        "ft/io.h",
+        "ft/kv_db.h",
+        "ft/logger.h",
+        "ft/prelude.h",
         "labyrinth/labyrinth.h",
-        "labyrinth/logger.h",
-        "labyrinth/player.h",
-        "labyrinth/prelude.h",
         "main.cpp",
     ]
 
