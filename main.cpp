@@ -9,5 +9,5 @@ using namespace lab;
 int main() {
     Game game;
 
-//    move_player<Game>(game);
+    move_player<Game>(game);
 }
