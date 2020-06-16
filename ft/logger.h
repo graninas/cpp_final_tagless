@@ -7,7 +7,7 @@ namespace ft {
 
 template<typename M>
 concept Logger = requires(M m, std::string msg) {
-    m.logMessage(msg);
+    m.log_message(msg);
 };
 
 

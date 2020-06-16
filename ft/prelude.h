@@ -15,4 +15,6 @@
 #include <iostream>
 #include <locale>
 
+#include <concepts>  // built-in concepts library
+
 #endif // PRELUDE_H
