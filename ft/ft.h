@@ -67,7 +67,7 @@
 
     Различия:
 
-    < нужен тип bool после concepts
+    < нужен тип bool после concept
     <    concept bool Logger = requires...
     < req clauses должны быть в curly braces без точек с запятой внутри
 
@@ -87,10 +87,10 @@
      { fromString<M>(v) } -> std::expected<ParseError, M>;
 
      // работает
-     // { toString<M>(m) } -> std::convertible_to<std::string>;
+     { toString<M>(m)    } -> std::convertible_to<std::string>;
      { fromString<M>(v)  } -> std::same_as<std::expected<ParseError, M>>;
 
-     // (но неясно как, ведь std::same_as и std::convertible_to имеют 2 шаблонных параметра)
+     // (но неясно как это работает, ведь std::same_as и std::convertible_to имеют 2 шаблонных параметра)
 
      https://stackoverflow.com/questions/57751484/are-types-allowed-to-be-specified-for-return-type-requirement-in-a-requires-expr
 
