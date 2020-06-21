@@ -5,6 +5,7 @@
 #include "io.h"
 #include "kv_db.h"
 #include "logger.h"
+#include "random.h"
 #include "expected.h"
 #include "serialization.h"
 #include "unit.h"
@@ -174,4 +175,6 @@
    https://www.youtube.com/watch?v=ZeU6OPaGxwM
 3. Павел Филонов. Концепты C++ (-fconcepts) и классы типов Haskell.
    https://youtu.be/f6TmB6Zw8MQ?t=79
+4. Hendrik Niemeyer "Intro to C++20's Concepts"
+   https://www.youtube.com/watch?v=rROoYqDr2KM
 */

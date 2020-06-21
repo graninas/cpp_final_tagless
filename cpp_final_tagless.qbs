@@ -9,9 +9,10 @@ CppApplication {
         "ft/kv_db.h",
         "ft/logger.h",
         "ft/prelude.h",
+        "ft/random.h",
         "ft/serialization.h",
         "ft/unit.h",
-        "labyrinth/labyrinth_game.h",
+        "labyrinth/app.h",
         "main.cpp",
     ]
 

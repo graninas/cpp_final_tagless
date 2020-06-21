@@ -5,9 +5,9 @@
 
 namespace ft {
 
-template<typename M>
+template<class M>
 concept Logger = requires(M m, std::string msg) {
-    m.log_message(msg);
+    { m.log_message(msg) } -> std::same_as<void>;
 };
 
 

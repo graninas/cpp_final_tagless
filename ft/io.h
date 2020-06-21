@@ -5,7 +5,7 @@
 
 namespace ft {
 
-template<typename M>
+template<class M>
 concept IO = requires(M m, std::string path) {
     m.read_file(path);
 };

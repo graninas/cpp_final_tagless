@@ -1,9 +1,10 @@
-#ifndef LABYRINTH_GAME_H
-#define LABYRINTH_GAME_H
+#ifndef APP_H
+#define APP_H
 
 #include "../ft/ft.h"
 
 #include <map>
+#include <experimental/random>
 
 namespace lab {
 
@@ -11,7 +12,7 @@ struct GameInfo {
 
 };
 
-class Game {
+class App {
 
 private:
 
@@ -29,6 +30,7 @@ public:
 
     ft::DBResult<ft::Unit> raw_write(const std::string& k, const std::string& v) {
         kvdb[k] = v;
+        return ft::Unit{};
     }
 
     // TODO: make methods independent
@@ -39,18 +41,23 @@ public:
     static std::string encode_value(GameInfo gi) {
         return "";   // TODO
     }
+
+    int get_random_int(int from, int to) const {
+        return std::experimental::randint(from, to);
+    }
 };
 
-static_assert (ft::KV_Key<Game, int>);
-static_assert (ft::KV_Value<Game, GameInfo>);
+static_assert (ft::Logger<App>);
+static_assert (ft::Random<App, int>);
+static_assert (ft::IO<App>);
 
-static_assert (ft::Logger<Game>);
-static_assert (ft::IO<Game>);
-static_assert (ft::KV_Write<Game, int, GameInfo>);
+static_assert (ft::KV_Key<App, int>);
+static_assert (ft::KV_Value<App, GameInfo>);
+static_assert (ft::KV_Write<App, int, GameInfo>);
 
 
 template <typename M>
-void move_player(M& m)
+void test_method(M& m)
     requires ft::Logger<M>
         && ft::KV_Write<M, int, GameInfo>
 {
@@ -65,4 +72,4 @@ void move_player(M& m)
 
 }
 
-#endif // LABYRINTH_GAME_H
+#endif // APP_H

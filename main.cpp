@@ -1,13 +1,12 @@
 
 #include "ft/ft.h"
-#include "labyrinth/labyrinth_game.h"
+#include "labyrinth/app.h"
 
 using namespace ft;
 using namespace lab;
-// ----------------------------------------------------------------
 
 int main() {
-    Game game;
+    App app;
 
-    move_player<Game>(game);
+    test_method<App>(app);
 }
