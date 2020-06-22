@@ -7,6 +7,7 @@
 #include "logger.h"
 #include "random.h"
 #include "expected.h"
+#include "optional.h"
 #include "serialization.h"
 #include "unit.h"
 

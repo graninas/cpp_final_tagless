@@ -10,7 +10,5 @@ concept Logger = requires(M m, std::string msg) {
     { m.log_message(msg) } -> std::same_as<void>;
 };
 
-
-
 }
 #endif // LOGGER_H

@@ -8,6 +8,7 @@ CppApplication {
         "ft/io.h",
         "ft/kv_db.h",
         "ft/logger.h",
+        "ft/optional.h",
         "ft/prelude.h",
         "ft/random.h",
         "ft/serialization.h",

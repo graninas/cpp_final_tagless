@@ -3,7 +3,7 @@
 
 #include <variant>
 
-namespace std {
+namespace ft {
 
 template <typename E, typename T>
 using expected = std::variant<E, T>;

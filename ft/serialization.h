@@ -18,7 +18,7 @@ concept Encode = requires(V v) {
 
 template<typename V>
 concept Decode = requires(std::string str) {
-    { decode<V>(str) } -> std::same_as<std::expected<ParseError, V>>;
+    { decode<V>(str) } -> std::same_as<expected<ParseError, V>>;
 };
 
 
