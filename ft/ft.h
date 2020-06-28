@@ -10,6 +10,7 @@
 #include "optional.h"
 #include "serialization.h"
 #include "unit.h"
+#include "functional_concepts.h"
 
 #endif // FT_H
 

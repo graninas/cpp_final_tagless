@@ -5,6 +5,7 @@ CppApplication {
     files: [
         "ft/expected.h",
         "ft/ft.h",
+        "ft/functional_concepts.h",
         "ft/io.h",
         "ft/kv_db.h",
         "ft/logger.h",
